@@ -1,0 +1,41 @@
+/*==========  Desktop First Method  ==========*/
+@media only screen and (max-width : 1600px) {
+	.contacts-header {
+		right: 20px;
+	}
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .tabs-services li,
+    .footer__content {
+       display: block !important;
+   }
+   .menu__haschild:hover > a::after {
+    transform: rotate(180deg);
+}
+.menu {
+    display: flex !important;
+}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+@media (min-width: 1330px) {
+	.container {
+		max-width: 1320px;
+	}
+}
+@media (min-width: 1600px) {
+	.container {
+		max-width: 1320px;
+	}
+}
