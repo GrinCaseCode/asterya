@@ -16,11 +16,12 @@
 	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.css" />
 	<link rel="stylesheet" href="libs/fontawesome-free-5.12.0-web/css/all.min.css" />
 	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" />
+	<link rel="stylesheet" href="libs/animate/animate.min.css" />
 	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick.css" />
 	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick-theme.css" />
 	<link rel="stylesheet" href="css/fonts.css" />
-	<link rel="stylesheet" href="css/main.css?ver=1.1" />
-	<link rel="stylesheet" href="css/media.css?ver=1.1" />
+	<link rel="stylesheet" href="css/main.css?ver=1.2" />
+	<link rel="stylesheet" href="css/media.css?ver=1.2" />
 </head>
 <body>
 
@@ -48,7 +49,15 @@
 							<div class="header__wrap">
 								<a href="#" class="btn-search"><img src="img/search.svg" alt="alt"></a>
 								<ul class="menu">
-									<li class="menu__haschild"><a href="#">О компании</a></li>
+									<li class="menu__haschild menu__about">
+										<a href="#">О компании</a>
+										<ul class="menu-dropdown">
+											<li><a href="#">Новости</a></li>
+											<li><a href="#">Клиенты</a></li>
+											<li><a href="#">Карьер</a></li>
+											<li><a href="#">Сертификаты</a></li>
+										</ul>
+									</li>
 									<li class="menu__haschild">
 										<a href="#">Услуги</a>
 										<div class="modal-dropdown">
@@ -61,7 +70,7 @@
 															</a>
 															<div class="logo-bottom">
 																<div class="year">15 <span>лет</span></div>
-																<div class="logo-descr">наш холдинг сущесвует и успешно работает уже более 15 лет</div>
+																<div class="logo-descr">на рынке <br>юридических услуг</div>
 															</div>
 															<a href="#" class="btn-main btn_callback">Написать нам</a>
 														</div>
@@ -204,7 +213,7 @@
 										</a>
 										<div class="logo-bottom">
 											<div class="year">15 <span>лет</span></div>
-											<div class="logo-descr">наш холдинг сущесвует и успешно работает уже более 15 лет</div>
+											<div class="logo-descr">на рынке <br>юридических услуг</div>
 										</div>
 										<a href="#" class="btn-main btn_callback">Написать нам</a>
 									</div>
@@ -265,7 +274,7 @@
 								</a>
 								<div class="logo-bottom">
 									<div class="year">15 <span>лет</span></div>
-									<div class="logo-descr">наш холдинг сущесвует и успешно работает уже более 15 лет</div>
+									<div class="logo-descr">на рынке <br>юридических услуг</div>
 								</div>
 							</div>
 						</div>
@@ -275,136 +284,177 @@
 			</header>
 
 			<section class="billbord">
-				<div class="row">
-					<div class="col-lg-4">
-						<div class="image-billbord">
-							<img src="img/billbord.jpg" alt="alt">
-						</div>
-					</div>
-					<div class="col-lg billbord__right">
-						<div class="slider-count"></div>
-						<ul class="slider-billbord">
-							<li>
-								<div class="image-slide">
-									<img src="img/slide_billbord1.jpg" alt="alt">
+				<div class="image-slide">
+					<img src="img/slide_billbord1.jpg" alt="alt">
+				</div>
+			</section>
+
+			<section class="billbord-slider">
+				<div class="container">
+					<div class="slider-count"></div>
+					<ul class="slider-billbord">
+						<li>
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="image-billbord">
+										<img src="img/billbord.jpg" alt="alt">
+									</div>
 								</div>
-								<div class="content-slide">
-									<div class="row align-items-end">
-										<div class="col-lg-9">
-											<div class="title-block">Основные услуги</div>
-											<h2 class="title-big">Земельное <br>право, недвижимость и строительство</h2>
-											<div class="text-billbord">Юридическая помощь в легализации объектов самовольного строительства</div>
-										</div>
-										<div class="col-lg-3">
-											<a href="#" class="btn-main">подробнее <img src="img/arrow.svg" alt="alt"></a>
+								<div class="col-lg-8">
+									<div class="content-slide">
+										<div class="row align-items-end">
+											<div class="col-lg-9">
+												<div class="title-block">Основные услуги</div>
+												<h2 class="title-big">Земельное <br>право, недвижимость и строительство</h2>
+												<div class="text-billbord">Юридическая помощь в легализации объектов самовольного строительства</div>
+											</div>
+											<div class="col-lg-3">
+												<a href="#" class="btn-main">подробнее <img src="img/arrow.svg" alt="alt"></a>
+											</div>
 										</div>
 									</div>
 								</div>
-							</li>
-							<li>
-								<div class="image-slide">
-									<img src="img/slide_billbord1.jpg" alt="alt">
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="image-billbord">
+										<img src="img/billbord.jpg" alt="alt">
+									</div>
 								</div>
-								<div class="content-slide">
-									<div class="row align-items-end">
-										<div class="col-lg-9">
-											<div class="title-block">Основные услуги</div>
-											<h2 class="title-big">Земельное <br>право, недвижимость и строительство</h2>
-											<div class="text-billbord">Юридическая помощь в легализации объектов самовольного строительства</div>
-										</div>
-										<div class="col-lg-3">
-											<a href="#" class="btn-main">подробнее <img src="img/arrow.svg" alt="alt"></a>
+								<div class="col-lg-8">
+									<div class="content-slide">
+										<div class="row align-items-end">
+											<div class="col-lg-9">
+												<div class="title-block">Основные услуги</div>
+												<h2 class="title-big">Земельное <br>право, недвижимость и строительство</h2>
+												<div class="text-billbord">Юридическая помощь в легализации объектов самовольного строительства</div>
+											</div>
+											<div class="col-lg-3">
+												<a href="#" class="btn-main">подробнее <img src="img/arrow.svg" alt="alt"></a>
+											</div>
 										</div>
 									</div>
 								</div>
-							</li>
-							<li>
-								<div class="image-slide">
-									<img src="img/slide_billbord1.jpg" alt="alt">
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="image-billbord">
+										<img src="img/billbord.jpg" alt="alt">
+									</div>
 								</div>
-								<div class="content-slide">
-									<div class="row align-items-end">
-										<div class="col-lg-9">
-											<div class="title-block">Основные услуги</div>
-											<h2 class="title-big">Земельное <br>право, недвижимость и строительство</h2>
-											<div class="text-billbord">Юридическая помощь в легализации объектов самовольного строительства</div>
-										</div>
-										<div class="col-lg-3">
-											<a href="#" class="btn-main">подробнее <img src="img/arrow.svg" alt="alt"></a>
+								<div class="col-lg-8">
+									<div class="content-slide">
+										<div class="row align-items-end">
+											<div class="col-lg-9">
+												<div class="title-block">Основные услуги</div>
+												<h2 class="title-big">Земельное <br>право, недвижимость и строительство</h2>
+												<div class="text-billbord">Юридическая помощь в легализации объектов самовольного строительства</div>
+											</div>
+											<div class="col-lg-3">
+												<a href="#" class="btn-main">подробнее <img src="img/arrow.svg" alt="alt"></a>
+											</div>
 										</div>
 									</div>
 								</div>
-							</li>
-							<li>
-								<div class="image-slide">
-									<img src="img/slide_billbord1.jpg" alt="alt">
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="image-billbord">
+										<img src="img/billbord.jpg" alt="alt">
+									</div>
 								</div>
-								<div class="content-slide">
-									<div class="row align-items-end">
-										<div class="col-lg-9">
-											<div class="title-block">Основные услуги</div>
-											<h2 class="title-big">Земельное <br>право, недвижимость и строительство</h2>
-											<div class="text-billbord">Юридическая помощь в легализации объектов самовольного строительства</div>
-										</div>
-										<div class="col-lg-3">
-											<a href="#" class="btn-main">подробнее <img src="img/arrow.svg" alt="alt"></a>
+								<div class="col-lg-8">
+									<div class="content-slide">
+										<div class="row align-items-end">
+											<div class="col-lg-9">
+												<div class="title-block">Основные услуги</div>
+												<h2 class="title-big">Земельное <br>право, недвижимость и строительство</h2>
+												<div class="text-billbord">Юридическая помощь в легализации объектов самовольного строительства</div>
+											</div>
+											<div class="col-lg-3">
+												<a href="#" class="btn-main">подробнее <img src="img/arrow.svg" alt="alt"></a>
+											</div>
 										</div>
 									</div>
 								</div>
-							</li>
-							<li>
-								<div class="image-slide">
-									<img src="img/slide_billbord1.jpg" alt="alt">
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="image-billbord">
+										<img src="img/billbord.jpg" alt="alt">
+									</div>
 								</div>
-								<div class="content-slide">
-									<div class="row align-items-end">
-										<div class="col-lg-9">
-											<div class="title-block">Основные услуги</div>
-											<h2 class="title-big">Земельное <br>право, недвижимость и строительство</h2>
-											<div class="text-billbord">Юридическая помощь в легализации объектов самовольного строительства</div>
-										</div>
-										<div class="col-lg-3">
-											<a href="#" class="btn-main">подробнее <img src="img/arrow.svg" alt="alt"></a>
+								<div class="col-lg-8">
+									<div class="content-slide">
+										<div class="row align-items-end">
+											<div class="col-lg-9">
+												<div class="title-block">Основные услуги</div>
+												<h2 class="title-big">Земельное <br>право, недвижимость и строительство</h2>
+												<div class="text-billbord">Юридическая помощь в легализации объектов самовольного строительства</div>
+											</div>
+											<div class="col-lg-3">
+												<a href="#" class="btn-main">подробнее <img src="img/arrow.svg" alt="alt"></a>
+											</div>
 										</div>
 									</div>
 								</div>
-							</li>
-							<li>
-								<div class="image-slide">
-									<img src="img/slide_billbord1.jpg" alt="alt">
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="image-billbord">
+										<img src="img/billbord.jpg" alt="alt">
+									</div>
 								</div>
-								<div class="content-slide">
-									<div class="row align-items-end">
-										<div class="col-lg-9">
-											<div class="title-block">Основные услуги</div>
-											<h2 class="title-big">Земельное <br>право, недвижимость и строительство</h2>
-											<div class="text-billbord">Юридическая помощь в легализации объектов самовольного строительства</div>
-										</div>
-										<div class="col-lg-3">
-											<a href="#" class="btn-main">подробнее <img src="img/arrow.svg" alt="alt"></a>
+								<div class="col-lg-8">
+									<div class="content-slide">
+										<div class="row align-items-end">
+											<div class="col-lg-9">
+												<div class="title-block">Основные услуги</div>
+												<h2 class="title-big">Земельное <br>право, недвижимость и строительство</h2>
+												<div class="text-billbord">Юридическая помощь в легализации объектов самовольного строительства</div>
+											</div>
+											<div class="col-lg-3">
+												<a href="#" class="btn-main">подробнее <img src="img/arrow.svg" alt="alt"></a>
+											</div>
 										</div>
 									</div>
 								</div>
-							</li>
-							<li>
-								<div class="image-slide">
-									<img src="img/slide_billbord1.jpg" alt="alt">
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="image-billbord">
+										<img src="img/billbord.jpg" alt="alt">
+									</div>
 								</div>
-								<div class="content-slide">
-									<div class="row align-items-end">
-										<div class="col-lg-9">
-											<div class="title-block">Основные услуги</div>
-											<h2 class="title-big">Земельное <br>право, недвижимость и строительство</h2>
-											<div class="text-billbord">Юридическая помощь в легализации объектов самовольного строительства</div>
-										</div>
-										<div class="col-lg-3">
-											<a href="#" class="btn-main">подробнее <img src="img/arrow.svg" alt="alt"></a>
+								<div class="col-lg-8">
+									<div class="content-slide">
+										<div class="row align-items-end">
+											<div class="col-lg-9">
+												<div class="title-block">Основные услуги</div>
+												<h2 class="title-big">Земельное <br>право, недвижимость и строительство</h2>
+												<div class="text-billbord">Юридическая помощь в легализации объектов самовольного строительства</div>
+											</div>
+											<div class="col-lg-3">
+												<a href="#" class="btn-main">подробнее <img src="img/arrow.svg" alt="alt"></a>
+											</div>
 										</div>
 									</div>
 								</div>
-							</li>
-						</ul>
-					</div>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</section>
 
@@ -421,7 +471,7 @@
 							</div>
 						</div>
 						<div class="col-lg-5">
-							<div class="image-about">
+							<div class="image-about fadeInUp wow" data-wow-iteration="1" data-wow-delay="0.3s">
 								<img src="img/about.jpg" alt="alt">
 								<div class="image-about__title">с историей</div>
 								<div class="stars-about"><img src="img/stars.svg" alt="alt">холдинг с большой и проверенной историей</div>
@@ -436,13 +486,13 @@
 					<div class="row">
 						<div class="col-lg-3 col-md-12 col-6">
 							<div class="item-number">
-								<div class="number-value">100 <span>более</span></div>
+								<div class="number-value"><div class="number-value__text" data-from="0" data-to="100">0</div> <span>более</span></div>
 								<p>клиентов уже получили свои положительные результаты </p>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-12 col-6">
 							<div class="item-number">
-								<div class="number-value">300 <span>более</span></div>
+								<div class="number-value"><div class="number-value__text" data-from="0" data-to="300">0</div> <span>более</span></div>
 								<p>решенных судебных споров в год </p>
 							</div>
 						</div>
@@ -1078,7 +1128,7 @@
 						</div>
 					</div>
 					<div class="col-lg contacts__right">
-						<div id="map"></div>
+						<div id="map" class="fadeInRight wow" data-wow-iteration="1" data-wow-delay="0.3s"></div>
 					</div>
 				</div>
 			</section>
@@ -1152,10 +1202,13 @@
 <script src="libs/fancybox/jquery.fancybox.pack.js"></script>
 <script src="libs/slick-1.5.9/slick/slick.min.js"></script>
 <script src="libs/scroll2id/PageScroll2id.min.js"></script>
+<script src="libs/animate/wow.min.js"></script>
+<script src="libs/animate/animate-css.js"></script>
 <script src="libs/mask/jquery.maskedinput.js"></script>
+<script src="libs/jquery-spincrement/jquery.spincrement.min.js"></script>
 <script src="libs/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
-<script src="js/common.js?ver=1.1"></script>
-
+<script src="js/common.js?ver=1.2"></script>
+<!--
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 <script>
 	$(document).ready(function() {
@@ -1184,7 +1237,7 @@
 			myMap.geoObjects.add(myPlacemark1);
 		}
 	});
-</script> 
+</script> -->
 <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 <!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </body>
