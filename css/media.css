@@ -929,6 +929,11 @@ border-bottom: 1px solid #E1E1E1;
 .menu-dropdown li a::after {
     display: none;
 }
+.btn-main::before {
+    top: -1px;
+    bottom: -1px;
+    height: initial;
+}
 }
 
 /* Small Devices, Tablets */

@@ -336,6 +336,7 @@ form {
 	left: auto;
 	background-color: #C3B48D;
 	z-index: -1;
+	border-radius: 2px;
 	transition: all 0.3s;
 }
 .btn-main:hover::before {
