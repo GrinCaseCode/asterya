@@ -584,7 +584,7 @@ a.footer__title,
     .number-value span {
         font-size: 20px;
         line-height: 20px;
-            transform-origin: 55% 70%;
+            transform-origin: 40% 72%;
     }
     .item-number {
         display: flex;
