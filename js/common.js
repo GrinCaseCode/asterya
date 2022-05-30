@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-/*animate*/
+	/*animate*/
 	new WOW().init();
 
 	
@@ -26,16 +26,26 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 
 
 	//кнопка sandwich
-	$(".btn_nav").click(function() {
-		$(".sandwich").toggleClass("active");
-		if ($(".menu").is(":hidden")) {
-			$(".menu").slideDown(200);
+	$(".btn_nav_catalog").click(function() {
+		$(".menu-mobile_menu").slideUp(200);
+		$(".btn_nav_menu").find(".sandwich").removeClass("active");
+		$(this).find(".sandwich").toggleClass("active");
+		if ($(".menu-mobile_catalog").is(":hidden")) {
+			$(".menu-mobile_catalog").slideDown(200);
 		} else {
-			$(".menu").slideUp(200);
+			$(".menu-mobile_catalog").slideUp(200);
 		}
-		
 	});
-
+	$(".btn_nav_menu").click(function() {
+		$(".menu-mobile_catalog").slideUp(200);
+		$(".btn_nav_catalog").find(".sandwich").removeClass("active");
+		$(this).find(".sandwich").toggleClass("active");
+		if ($(".menu-mobile_menu").is(":hidden")) {
+			$(".menu-mobile_menu").slideDown(200);
+		} else {
+			$(".menu-mobile_menu").slideUp(200);
+		}
+	});
 
 
 
@@ -45,18 +55,18 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 	});
 
 
-$(".modal-dropdown__close").click(function(e) {
+	$(".modal-dropdown__close").click(function(e) {
 		e.preventDefault();
 		$("#callback.modal-dropdown").fadeOut(200);
 	});
 
-$(".content-callback .btn-main").click(function(e) {
+	$(".content-callback .btn-main").click(function(e) {
 		e.preventDefault();
 		$(".content-callback").fadeOut(0);
 		$(".thanks-callback").fadeIn(200);
 	});
 
-{
+	{
 		if ($(window).width() < 992) { 
 			$(".footer__title").click(function() {
 				$(this).toggleClass("active");
@@ -65,9 +75,9 @@ $(".content-callback .btn-main").click(function(e) {
 		}
 	}
 
-	  var show = true;
-    var countbox = ".item-number";
-    $(window).on("scroll load resize", function () {
+	var show = true;
+	var countbox = ".item-number";
+	$(window).on("scroll load resize", function () {
         if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
         var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
         var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
@@ -75,14 +85,14 @@ $(".content-callback .btn-main").click(function(e) {
         var d_height = $(document).height(); // Высота всего документа
         var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
         if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
-            $('.number-value__text').css('opacity', '1');
-            $('.number-value__text').spincrement({
-            	from: -1.5,
-                thousandSeparator: "",
-                duration: 2000
-            });
-             
-            show = false;
+        	$('.number-value__text').css('opacity', '1');
+        	$('.number-value__text').spincrement({
+        		from: -1.5,
+        		thousandSeparator: "",
+        		duration: 2000
+        	});
+
+        	show = false;
         }
     });
 
@@ -131,23 +141,32 @@ $(".content-callback .btn-main").click(function(e) {
 
 
 
-	 $(".slider-services").each(function(){
-    var $this = $(this),
-    $blockArrows = $(this).parent().find(".controls-services");
-    $this.slick({
-     arrows: true,
-		autoplay: true,
-		dots: false,
-		touchThreshold: 1000,
-		variableWidth: true,
-		prevArrow: '<div class="slick-prev slick-arrow"><img src="img/prev.svg" alt="alt"><div/>',
-		nextArrow: '<div class="slick-next slick-arrow"><img src="img/next.svg" alt="alt"><div/>',
-		infinite: true,
-		slidesToScroll: 1,
-		slidesToShow: 1,
-      appendArrows: $blockArrows,
-    });
-  });
+	$(".slider-services").each(function(){
+		var $this = $(this),
+		$blockArrows = $(this).parent().find(".controls-services");
+		$this.slick({
+			arrows: true,
+			autoplay: true,
+			dots: false,
+			touchThreshold: 1000,
+			variableWidth: true,
+			prevArrow: '<div class="slick-prev slick-arrow"><img src="img/prev.svg" alt="alt"><div/>',
+			nextArrow: '<div class="slick-next slick-arrow"><img src="img/next.svg" alt="alt"><div/>',
+			infinite: true,
+			slidesToScroll: 1,
+			slidesToShow: 1,
+			appendArrows: $blockArrows,
+			responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					dots: true,
+					arrows: false,
+				}
+			}
+			]
+		});
+	});
 
 
 	$(".input-phone").mask("+7 (999) 999-99-99");
@@ -157,45 +176,62 @@ $(".content-callback .btn-main").click(function(e) {
 	 $('select').styler();
 
 	 $('.tabs-services li a').click(function(event) {
-		event.preventDefault();
-		$(this).parent().parent().find("li").removeClass('active');
-		$(this).parent().addClass('active');
-		$(".tab-pane-services").fadeOut(0);
-		var selectTab = $(this).attr("href");
-		$(selectTab).fadeIn(200);
-		  $('.slider-services').slick('refresh');
-	}); 
+	 	event.preventDefault();
+	 	$(this).parent().parent().find("li").removeClass('active');
+	 	$(this).parent().addClass('active');
+	 	$(".tab-pane-services").fadeOut(0);
+	 	var selectTab = $(this).attr("href");
+	 	$(selectTab).fadeIn(200);
+	 	$('.slider-services').slick('refresh');
+	 }); 
 
+$(".mobile-title-service").click(function(e) {
+	 		e.preventDefault();
+	 		$(this).parent().toggleClass("active");
+	 		$(this).siblings(".mobile-tab").slideToggle(200);
+	 	});
+/*
 	 $('.btn-tab').click(function(event) {
-		event.preventDefault();
-		$(this).toggleClass("active");
-		$(".tabs-services li:not(.active)").slideToggle(200);
-		$(".tabs-services li").addClass("active_mob");
-	});
+	 	event.preventDefault();
+	 	$(this).toggleClass("active");
+	 	$(".tabs-services li:not(.active)").slideToggle(200);
+	 	$(".tabs-services li").addClass("active_mob");
+	 });
 
-	if ($(window).width() < 992) {
-		$('.tabs-services li a').click(function() {
-			if ($(this).parent().hasClass("active_mob")) {
-				$(".tabs-services li:not(.active)").slideUp(200);
-				$('.btn-tab').removeClass("active");
-			} else {
-			}		
-		});
-
-		$(".menu > li.menu__haschild > a").click(function(e) {
-		e.preventDefault();
-		$(this).parent().toggleClass("active");
-		$(this).siblings(".modal-dropdown").slideToggle(200);
-	});
-
-		$(".modal-list > li.modal-list__haschild > a").click(function(e) {
-		e.preventDefault();
-		$(this).parent().toggleClass("active");
-		$(this).siblings(".subdropdown-menu").slideToggle(200);
-	});
+	 $('.tabs-services li a').click(function() {
+	 		if ($(this).parent().hasClass("active_mob")) {
+	 			$(".tabs-services li:not(.active)").slideUp(200);
+	 			$('.btn-tab').removeClass("active");
+	 		} else {
+	 		}		
+	 	});
+*/
 
 
-	}
+	 if ($(window).width() < 992) {
+	 	
+
+	 	$(".menu > li.menu__haschild > a").click(function(e) {
+	 		e.preventDefault();
+	 		$(this).parent().toggleClass("active");
+	 		$(this).siblings(".modal-dropdown").slideToggle(200);
+	 		$(this).siblings(".menu-dropdown").slideToggle(200);
+	 	});
+
+	 	$(".modal-list > li.modal-list__haschild > a").click(function(e) {
+	 		e.preventDefault();
+	 		$(this).parent().toggleClass("active");
+	 		$(this).siblings(".subdropdown-menu").slideToggle(200);
+	 	});
+
+
+$(".title-small_close").click(function(e) {
+	 		e.preventDefault();
+	 		$(".modal-dropdown").fadeOut(200);
+	 	});
+
+
+	 }
 
 	//Попап менеджер FancyBox
 	//Документация: http://fancybox.net/howto
