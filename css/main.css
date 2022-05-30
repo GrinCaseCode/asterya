@@ -1301,9 +1301,10 @@ a.footer__title:hover {
 	display: block;
 }
 .sandwich {
-	width: 60px;
-	height: 60px;
-	padding-top: 18px;
+	width: 30px;
+	height: 30px;
+	padding-top: 7px;
+	border-radius: 50%;
 	margin: auto;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -1318,11 +1319,11 @@ a.footer__title:hover {
 .sw-topper {
 	position: relative;
 	top: 4px;
-	width: 22px;
-	height: 2px;
+	width: 13px;
+	height: 1.5px;
 	display: block;
 	margin: 0 auto;
-	background-color: #000;
+	background-color: #fff;
 	border: medium none;
 	transition: transform 0.5s, top 0.2s;
 	/* transition-delay: 0.2s, 0s; */
@@ -1330,38 +1331,41 @@ a.footer__title:hover {
 .sw-bottom {
 	position: relative;
 	top: 9px;
-	width: 22px;
-	height: 2px;
+	width: 13px;
+	height: 1.5px;
 	display: block;
 	margin: 0 auto;
-	background-color: #000;
+	background-color: #fff;
 	border: medium none;
 	transition: transform 0.5s, top 0.2s;
 	transition-delay: 0.2s, 0s;
 }
 .sw-footer {
 	position: relative;
-	top: 14px;
-	width: 22px;
-	height: 2px;
+	top: 9px;
+	width: 13px;
+	height: 1.5px;
 	display: block;
 	margin: 0 auto;
-	background-color: #000;
+	background-color: #fff;
 	border: medium none;
 	transition: all 0.5s;
 	transition-delay: 0.1s;
 }
 
 .btn_nav .sandwich.active .sw-topper {
-	top: 11px;
+	top: 8px;
 	transform: rotate(45deg);
 }
 .btn_nav .sandwich.active .sw-bottom {
 	opacity: 0;
 }
 .btn_nav .sandwich.active .sw-footer {
-	top: 7px;
+	top: 6px;
 	transform: rotate(-45deg); 
+}
+.btn_nav_menu .sandwich.active .sw-topper {
+	width: 24px;
 }
 .footer__title i {
 	display: none;
@@ -1446,4 +1450,34 @@ border-bottom: 1px solid #EAEAEA;
 .menu-dropdown li a:hover {
 	color: #B1A27B;
 	text-shadow: 0 0 1px #B1A27B;
+}
+.btn_nav_catalog .sandwich {
+	background-color: #b1a27b;
+}
+.btn_nav_menu .sandwich span {
+	width: 16px;
+	margin: 0;
+	background-color: #b1a27b;
+}
+.btn_nav_menu .sandwich .sw-footer {
+	top: 10px;
+	width: 24px;
+}
+.btn_nav_menu .sandwich {
+	align-items: flex-start;
+}
+.btn_nav_menu {
+	margin-left: 20px;
+}
+.phone-mobile {
+	display: none;
+}
+.btn_top {
+	display: none;
+}
+.mobile-title-service {
+	display: none;
+}
+.modal-dropdown .title-small img {
+	display: none;
 }
