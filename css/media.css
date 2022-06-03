@@ -94,10 +94,10 @@
         margin-left: calc((100vw - 920px)/2);
     }
     .contacts .col-lg-4, .services .col-lg-4, .billbord .col-lg-4 {
-     max-width: 305px;
- }
- .modal-dropdown__left,
- .header__left {
+       max-width: 305px;
+   }
+   .modal-dropdown__left,
+   .header__left {
     padding-right: 20px;
 }
 .year {
@@ -158,8 +158,8 @@ body {
     padding-top: 25px;
 }
 .tab-container-services hr {
- margin-top: 20px;
- margin-bottom: 10px;
+   margin-top: 20px;
+   margin-bottom: 10px;
 }
 .consultation__title {
     font-size: 97px;
@@ -293,38 +293,38 @@ body {
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
     .modal-dropdown__left, .header__left {
-     display: none;
- }
- .contacts-header {
-     position: relative;
-     top: 0;
-     right: 0;
-     display: none;
- }
- .header-line__left {
-     padding-left: 0;
-     text-align: center;
-     visibility: visible;
-     padding: 0;
-     opacity: 1;
- }
- .header-line__left::before {
-     display: none;
- }
- .image-billbord {
+       display: none;
+   }
+   .contacts-header {
+       position: relative;
+       top: 0;
+       right: 0;
+       display: none;
+   }
+   .header-line__left {
+       padding-left: 0;
+       text-align: center;
+       visibility: visible;
+       padding: 0;
+       opacity: 1;
+   }
+   .header-line__left::before {
+       display: none;
+   }
+   .image-billbord {
     height: 205px;
     margin-top: 0;
 }
 .header__wrap .menu {
- display: none;
+   display: none;
 }
 .btn-search {
- position: absolute;
- top: 21px;
- right: 0;
+   position: absolute;
+   top: 21px;
+   right: 0;
 }
 .header-line {
- padding: 7px 0;
+   padding: 7px 0;
 }
 .header-line__left .logo img {
     max-width: 135px;
@@ -352,7 +352,7 @@ body {
     padding-top: 40px;
 }
 .slider-billbord {
- margin: 0 -15px;
+   margin: 0 -15px;
 }
 .slider__counter {
     top: 163px;
@@ -486,7 +486,7 @@ a.footer__title,
     max-width: 330px;
 }
 .contacts-block__flex .list-social {
- margin-left: 20px;
+   margin-left: 20px;
 }
 .tabs-services {
     display: flex;
@@ -816,7 +816,7 @@ a.footer__title,
     padding-bottom: 0px;
 }
 .slider-services {
- padding-bottom: 35px;
+   padding-bottom: 35px;
 }
 .services {
     padding-bottom: 0;
@@ -1154,6 +1154,27 @@ a.footer__title,
 .breadcrumbs {
     margin-right: -15px;
     overflow: auto;
+    letter-spacing: 0.35em;
+}
+.breadcrumbs li::after {
+    margin: 0 8px;
+}
+.breadcrumbs::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+.breadcrumbs::-webkit-scrollbar:vertical {
+    width: 0px;
+}
+.breadcrumbs::-webkit-scrollbar:horizontal {
+    height: 0px;
+}
+.breadcrumbs::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+}
+.breadcrumbs::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: transparent;
 }
 .btn-service {
     font-weight: 500;
@@ -1324,9 +1345,9 @@ a.footer__title,
         line-height: 43px;
     }
     .content-slide {
-     padding-top: 25px;
- }
- .title-section {
+       padding-top: 25px;
+   }
+   .title-section {
     font-size: 38px;
     line-height: 40px;
 }
@@ -1338,29 +1359,29 @@ a.footer__title,
     margin-top: 23px;
 }
 .image-about {
- margin-left: 0;
- margin-bottom: 0;
+   margin-left: 0;
+   margin-bottom: 0;
 }
 
 .image-about::before {
     margin-top: -80px;
 }
 .info-service {
- padding-right: 0;
+   padding-right: 0;
 }
 .tab-container-services hr {
- margin-top: 30px;
+   margin-top: 30px;
 }
 .slider-billbord .slick-dots {
- padding-left: 0;
- text-align: center;
+   padding-left: 0;
+   text-align: center;
 }
 }
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
- .title-big {
+   .title-big {
     font-size: 30px;
     line-height: 35px;
 }
@@ -1414,9 +1435,9 @@ a.footer__title,
     .sidebar-service,
     .tabs-services li,
     .footer__content {
-     display: block !important;
- }
- .menu__haschild:hover > a::after {
+       display: block !important;
+   }
+   .menu__haschild:hover > a::after {
     transform: rotate(180deg);
 }
 .menu {
