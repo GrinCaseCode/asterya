@@ -66,6 +66,13 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 		$(".thanks-callback").fadeIn(200);
 	});
 
+	$(".btn-service").click(function(e) {
+		e.preventDefault();
+		$(this).toggleClass("active");
+		$(".sidebar-service").slideToggle(200);
+		$(".sidebar-about").slideToggle(200);
+	});
+
 	{
 		if ($(window).width() < 992) { 
 			$(".footer__title").click(function() {
@@ -85,8 +92,8 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
         var d_height = $(document).height(); // Высота всего документа
         var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
         if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
-        	$('.number-value__text').css('opacity', '1');
-        	$('.number-value__text').spincrement({
+        	$('.about-numbers .number-value__text').css('opacity', '1');
+        	$('.about-numbers .number-value__text').spincrement({
         		from: -1.5,
         		thousandSeparator: "",
         		duration: 2000
@@ -146,7 +153,6 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 		$blockArrows = $(this).parent().find(".controls-services");
 		$this.slick({
 			arrows: true,
-			autoplay: true,
 			dots: false,
 			touchThreshold: 1000,
 			variableWidth: true,
@@ -168,6 +174,26 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 		});
 	});
 
+	$(".slider-sertificats").slick({
+			arrows: true,
+			dots: true,
+			touchThreshold: 1000,
+			variableWidth: false,
+			prevArrow: '<div class="slick-prev slick-arrow"><img src="img/prev.svg" alt="alt"><div/>',
+			nextArrow: '<div class="slick-next slick-arrow"><img src="img/next.svg" alt="alt"><div/>',
+			infinite: true,
+			slidesToScroll: 1,
+			slidesToShow: 5,
+			responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					variableWidth: true,
+					arrows: false,
+				}
+			}
+			]
+		});
 
 	$(".input-phone").mask("+7 (999) 999-99-99");
 
