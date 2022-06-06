@@ -195,6 +195,33 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 			]
 		});
 
+	$(".slider-recomendation").slick({
+			arrows: true,
+			dots: true,
+			touchThreshold: 1000,
+			variableWidth: false,
+			prevArrow: '<div class="slick-prev slick-arrow"><img src="img/prev.svg" alt="alt"><div/>',
+			nextArrow: '<div class="slick-next slick-arrow"><img src="img/next.svg" alt="alt"><div/>',
+			infinite: true,
+			slidesToScroll: 1,
+			slidesToShow: 4,
+			responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+						slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					variableWidth: true,
+					arrows: false,
+				}
+			}
+			]
+		});
+
 	$(".input-phone").mask("+7 (999) 999-99-99");
 
 
@@ -255,9 +282,15 @@ $(".title-small_close").click(function(e) {
 	 		e.preventDefault();
 	 		$(".modal-dropdown").fadeOut(200);
 	 	});
-
-
 	 }
+
+	   $(".item-vacancy__head").click(function() {
+  $(this).parent().toggleClass("active");
+  $(this).siblings(".item-vacancy__content").slideToggle(200);
+  $(this).parent().siblings(".item-vacancy").removeClass("active");
+  $(this).parent().siblings(".item-vacancy").find(".item-vacancy__content").slideUp(200);
+});
+  
 
 	//Попап менеджер FancyBox
 	//Документация: http://fancybox.net/howto
