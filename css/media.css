@@ -85,6 +85,9 @@
     .career-text {
         padding-right: 460px;
     }
+    .error-content::after {
+        right: 0;
+    }
 }
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
@@ -301,10 +304,28 @@ body {
 }
 .breadcrumbs {
     letter-spacing: 0.3em;
-    }
-    .article-block {
-        padding-left: 20px;
-    }
+}
+.article-block {
+    padding-left: 20px;
+}
+.error-content {
+    padding-top: 30px;
+    padding-left: 0;
+}
+.error-content .title-page {
+    font-size: 53px;
+    line-height: 55px;
+    padding-bottom: 30px;
+}
+.error-number {
+    font-size: 175px;
+}
+.error-content__bottom {
+    margin-top: 20px;
+}
+.error-content__bottom .btn-main {
+    margin-left: 10px;
+}
 }
 
 /* Medium Devices, Desktops */
@@ -1384,7 +1405,7 @@ a.footer__title,
 .image-article {
     margin-top: 0;
     margin-bottom: 25px;
-    }   
+}   
 .article-block form {
     padding-right: 0;
 }
@@ -1397,15 +1418,72 @@ a.footer__title,
 .slider-recomendation {
     padding-top: 25px;
     padding-bottom: 35px;
-    }
-    .slider-recomendation .service-unit {
-        width: 300px;
-        margin: 0 7px;
-    }
-    .slider-recomendation {
-        margin: 0 -7px;
-        margin-right: -15px;
-    }
+}
+.slider-recomendation .service-unit {
+    width: 300px;
+    margin: 0 7px;
+}
+.slider-recomendation {
+    margin: 0 -7px;
+    margin-right: -15px;
+}
+.image-error {
+    display: none;
+}
+.error-content .title-page {
+    font-size: 31px;
+    line-height: 40px;
+    padding-bottom: 20px;
+}
+.error-number {
+    font-size: 140px;
+    line-height: 110px;
+}
+.error-number::before, .error-number::after {
+    margin-top: 50px;
+}
+.error-content__bottom {
+    display: block;
+}
+.error-content__bottom .btn-main {
+    margin-left: 0;
+    margin-top: 20px;
+}
+.error-content::after {
+    display: none;
+}
+.error-content .title-block {
+    padding-bottom: 15px;
+}
+.page-error {
+    padding-bottom: 20px;
+}
+.search-page .title-page {
+    padding-bottom: 25px;
+}
+.search-page .title-small {
+    font-size: 21px;
+    line-height: 25px;
+}
+.item-search {
+    padding-top: 25px;
+    display: block;
+}
+.item-search .btn-main {
+    margin: 0;
+    margin-top: 20px;
+}
+.item-search__title {
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 10px;
+}
+.search-page {
+    background-image: none;
+}
+.search-page .pager {
+    margin-top: 35px;
+}
 }
 
 /* Small Devices, Tablets */
