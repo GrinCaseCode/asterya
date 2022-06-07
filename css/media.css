@@ -1396,7 +1396,8 @@ a.footer__title,
     padding-bottom: 0;
 }
 .article-block {
-    padding: 20px;
+    padding: 20px 15px;
+    margin-top: 0;
     padding-bottom: 30px;
 }
 .article-block .title-page {
